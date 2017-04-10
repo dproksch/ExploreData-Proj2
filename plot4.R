@@ -45,6 +45,6 @@ names(alldata) <- c("year","Emissions")
 
 
 png("plot4.png", width = 480, height = 480, units="px")
-p <- ggplot(alldata, aes(year,Emissions)) + geom_point()
+p <- ggplot(alldata, aes(year,Emissions)) + geom_point() + geom_smooth(method = "lm", se = FALSE)
 p
 dev.off()
